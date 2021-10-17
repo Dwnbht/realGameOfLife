@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.image.BufferStrategy;
 
 public class UserInterface {
+    static MyWindow window;
     public static int scale = 10;
     static Color [] colors = {Color.ORANGE, Color.GREEN, Color.CYAN,Color.MAGENTA,Color.RED,Color.PINK};
     static int randomColor = (int)(Math.random() * 6);
@@ -34,7 +35,10 @@ public class UserInterface {
         }
     }
     public static void main(String [] args){
-        MyWindow window = new MyWindow();
+        window = new MyWindow();
         renderer(window.canvas.getBufferStrategy());
+
+
+
     }
 }

@@ -4,13 +4,13 @@ public class World {
     static int numHeight = 60;
     static boolean [][]grid = new boolean[numHeight][numWidth];
     public static void createCrasher(){
-        int rad = (int)(Math.random() * (numWidth - 5) + 2);
-        int rad2 = (int)(Math.random() * (numHeight - 5)+ 2);
-        grid[rad2][rad] = true;
-        grid[rad2][rad + 1] = true;
-        grid[rad2][rad + 2] = true;
-        grid[rad2 - 1][rad + 2] = true;
-        grid[rad2 - 2][rad + 1] = true;
+        int oneX = UserInterface.window.frame.getMousePosition().x / UserInterface.scale;
+        int twoY = UserInterface.window.frame.getMousePosition().y / UserInterface.scale;
+        grid[twoY][oneX] = true;
+        grid[twoY][oneX + 1] = true;
+        grid[twoY][oneX + 2] = true;
+        grid[twoY - 1][oneX + 2] = true;
+        grid[twoY - 2][oneX + 1] = true;
 
     }
     public static void randomize(){
